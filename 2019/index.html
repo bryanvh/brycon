@@ -70,9 +70,7 @@
     </div> 
     <div class="lb-mid-pad lb-grid" style="background-color:#ffffff; margin-top:0px; margin-bottom:0px;"> 
      <div class="lb-row lb-row-max-large lb-snap"> 
-      <div class="lb-col lb-tiny-24 lb-mid-24" align="center"> 
-<iframe src="http://free.timeanddate.com/countdown/i6js2hn2/n155/cf11/cm0/cu4/ct4/cs0/ca0/co1/cr0/ss0/cac000/cpc000/pct/tcfff/fs100/szw576/szh243/tac000/tpc000/iso2019-01-05T08:00:00/pa5" allowTransparency="true" frameborder="0" width="552" height="45"></iframe>
-      </div> 
+      <div id="countdown-timer" class="lb-col lb-txt-bold lb-h1 lb-title"></div> 
      </div> 
     </div> 
     <div class="lb-mid-pad lb-none-v-margin lb-grid" style="background-color:#f1f4f6;"> 
@@ -169,5 +167,9 @@
     </div> 
    </main> 
   </div>
+  <script src="./js/countdown.js"></script>
+  <script>
+    initCountdown("countdown-timer", "2019-01-05T08:00:00.000-06:00");
+  </script>
  </body>
 </html>
