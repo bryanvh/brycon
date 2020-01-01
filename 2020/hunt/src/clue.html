@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Brycon Treasure Hunt</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 id="room-header" class="display-4">Brycon Treasure Hunt</h1>
+            <p class="lead">Work together to identify the game box and win!</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-6">
+                <div class="card" style="width: 30rem;">
+			<img src="/images/box_covers/${sequence}.png" class="game-box-img rounded"
+                        alt="Can you guess what game this is?">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                              <h5 class="card-title">Can you guess game ${game_num} of ${game_count}?</h5>
+                            </div>
+                        </div>
+			<form action="${uri}" method="get" class="form-inline">
+                            <div class="form-group mx-sm-3 mb-2">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Game ID" name="game_id">
+                                    </div>
+                                    <div class="col">
+					    <input type="hidden" name="sequence" value="${sequence}">
+                                        <input type="submit" class="btn btn-primary mb-2" name="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var url = $$(location).attr('href');
+            var url_parts = url.split("/");
+            var hunt_index = url_parts.indexOf("hunt");
+            var room_name = url_parts[hunt_index + 1];
+            url_parts = room_name.split("?")
+            room_name = url_parts[0]
+            $$("#room-header").text("Brycon Treasure Hunt - Room: " + room_name);
+            $$(document).attr("title", room_name + " - Brycon Treasure Hunt");
+        });
+    </script>
+</body>
+</html>
