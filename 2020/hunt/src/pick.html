@@ -1,36 +1,70 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="footer.css">
+    
     <title>Brycon Treasure Hunt</title>
 </head>
-<body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <p class="lead">Pick your team to get started.</p>
+
+<body class="text-center">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Brycon</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brycon.io">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://brycon.io/hunt">Treasure Hunt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brycon.io/images/casino_directions.png">Parking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brycon.io/images/conf_directions.png">Room Directions</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+    <!-- Nav Bar End -->
+
+    <!-- Page Header -->
+    <div class="container mb-3">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <h4 id="room-header">Pick your team to get started</h4>
+        </div>        
     </div>
+    <!-- Page Header End -->
+
+    <!-- Content Area -->
     <div class="container">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-6">
-                <div class="card" style="width: 30rem;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <ul>${teams}</ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col"></div>
-        </div>
+        <ul class="list-group">
+            ${teams}
+        </ul>
     </div>
+    <!-- Content Area End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+          <span class="text-muted">&copy; 2020 brycon.io</span>
+        </div>
+      </footer>
+    <!-- Footer End -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -42,5 +76,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var url = $$(location).attr('href');
+            var url_parts = url.split("/");
+            var hunt_index = url_parts.indexOf("hunt");
+            var room_name = url_parts[hunt_index + 1];
+            url_parts = room_name.split("?")
+            room_name = url_parts[0]
+            $$("#room-header").text("Brycon Treasure Hunt - Room: " + room_name);
+            $$(document).attr("title", room_name + " - Brycon Treasure Hunt");
+        });
+    </script>
 </body>
+
 </html>

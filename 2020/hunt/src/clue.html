@@ -9,11 +9,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="footer.css">
+    
     <title>Brycon Treasure Hunt</title>
 </head>
 
 <body class="text-center">
+    <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Brycon</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -37,24 +39,39 @@
             </ul>
         </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 id="room-header" class="display-4">Brycon Treasure Hunt</h1>
-            <p class="lead">Work together to identify the game box and win!</p>
-        </div>
-    </div>
+    <!-- Nav Bar End -->
+
+    <!-- Page Header -->
     <div class="container">
-        <img src="/images/box_covers/${sequence}.png" class="img-fluid rounded" alt="Can you guess what game this is?">
-        <h5 class="card-title">Can you guess game ${game_num} of ${game_count}?</h5>
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <h4 id="room-header">Brycon Treasure Hunt</h4>
+        </div>
+        <h5>Can you guess game ${game_num} of ${game_count}?</h5>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Content Area -->
+    <div class="container  mb-3">
+        <img src="/images/box_covers/${sequence}.png" class="img-fluid rounded mb-3"
+            alt="Can you guess what game this is?">
         <form action="${uri}" method="get" class="form-inline justify-content-center">
             <input type="hidden" name="sequence" value="${sequence}">
             <div class="form-group mx-sm-3 mb-2">
                 <label for="game_id_id" class="sr-only">Game ID</label>
                 <input type="text" class="form-control" id="game_id_id" placeholder="Game ID" name="game_id">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
-        </form> 
+            <button type="submit" class="btn btn-primary mb-2 ml-3">Submit</button>
+        </form>
     </div>
+    <!-- Content Area End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+          <span class="text-muted">&copy; 2020 brycon.io</span>
+        </div>
+      </footer>
+    <!-- Footer End -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

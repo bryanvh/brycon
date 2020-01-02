@@ -9,11 +9,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="footer.css">
+    
     <title>Brycon Treasure Hunt</title>
 </head>
 
 <body class="text-center">
+    <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Brycon</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -37,15 +39,30 @@
             </ul>
         </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 id="room-header" class="display-4"><!-- Header Title Here --></h1>
-            <p class="lead"><!-- Header subtitle here --></p>
+    <!-- Nav Bar End -->
+
+    <!-- Page Header -->
+    <div class="container mb-3">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <h4 id="room-header"><!-- Page header text --></h4>
         </div>
+        <h5><!-- Subtitle text --></h5>
     </div>
+    <!-- Page Header End -->
+
+    <!-- Content Area -->
     <div class="container">
-        <!-- Put page content here -->
+        <!-- Body content here -->
     </div>
+    <!-- Content Area End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+          <span class="text-muted">&copy; 2020 brycon.io</span>
+        </div>
+      </footer>
+    <!-- Footer End -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -57,6 +74,19 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var url = $$(location).attr('href');
+            var url_parts = url.split("/");
+            var hunt_index = url_parts.indexOf("hunt");
+            var room_name = url_parts[hunt_index + 1];
+            url_parts = room_name.split("?")
+            room_name = url_parts[0]
+            $$("#room-header").text("Brycon Treasure Hunt - Room: " + room_name);
+            $$(document).attr("title", room_name + " - Brycon Treasure Hunt");
+        });
     </script>
 </body>
 
