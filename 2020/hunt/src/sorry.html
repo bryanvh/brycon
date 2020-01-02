@@ -3,26 +3,68 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="refresh" content="7; URL=${uri}?sequence=${sequence}" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <title>Are you even trying?</title>
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="footer.css">
+
+    <title>Brycon Treasure Hunt</title>
 </head>
 
 <body class="text-center">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">            
-            <p class="lead">We interrupt this program with a special message...</p>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Brycon</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brycon.io">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://brycon.io/hunt">Treasure Hunt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brycon.io/images/casino_directions.png">Parking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brycon.io/images/conf_directions.png">Room Directions</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Nav Bar End -->
+
+    <!-- Page Header -->
+    <div class="container mb-3">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <h4 id="room-header">We interrupt this program with a special message...</h4>
         </div>
     </div>
-    <div class="alert alert-danger" role="alert">
-        Sorry, that is not the correct answer.
-    </div>
+    <!-- Page Header End -->
+
+    <!-- Content Area -->
     <div class="container">
+        <div class="alert alert-danger" role="alert">
+            Sorry, that is not the correct answer.
+        </div>
         <img src="/images/box_covers/caught_me_again.jpg" class="img-fluid rounded" alt="Caught me again...">
     </div>
+    <!-- Content Area End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">&copy; 2020 brycon.io</span>
+        </div>
+    </footer>
+    <!-- Footer End -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
