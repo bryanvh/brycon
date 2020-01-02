@@ -76,19 +76,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-            var url = $$(location).attr('href');
-            var url_parts = url.split("/");
-            var hunt_index = url_parts.indexOf("hunt");
-            var room_name = url_parts[hunt_index + 1];
-            url_parts = room_name.split("?")
-            room_name = url_parts[0]
-            $$("#room-header").text("Brycon Treasure Hunt - Room: " + room_name);
-            $$(document).attr("title", room_name + " - Brycon Treasure Hunt");
-        });
-    </script>
 </body>
 
 </html>
