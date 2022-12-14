@@ -1,0 +1,94 @@
+@media only screen and (min-width:769px) {
+    #aws-page-content {
+      margin-top: 0px;
+    }
+    
+    .m-page-header + #aws-page-content {
+      margin-top: 0px
+    }
+}
+
+#countdown-timer {
+  text-align: center;
+}
+
+.box {
+  border: 2px solid #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.box-square {
+  border-radius: 0px;
+}
+
+.info {
+  background-color: #ddd;
+  border-color: #aaa; 
+}
+
+.warning {
+  background-color: #FFF484;
+  border-color: #DCC600;
+}
+
+.success {
+  background-color: #B9FFAB;
+  border-color: #116400;
+  color: #116400;
+}
+
+.error {
+  background-color: #EBB1B1;
+  border-color: #973939;
+  color: #973939;
+}
+
+.logo {
+  height: auto;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'OpenSansLight';
+  font-style: normal;
+  font-weight: 300;
+  src: local ('OpenSansLight'), local ('OpenSans-Light'), url (https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2) format ('woff2') ;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local ('OpenSans'), local ('OpenSans-Regular'), url (https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format ('woff2') ;
+}
+
+@font-face {
+  font-family: 'OpenSansBold';
+  font-style: normal;
+  font-weight: 700;
+  src: local ('OpenSansBold'), local ('OpenSans-Bold'), url (https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format ('woff2') ;
+}
+
+@font-face {
+  font-family: 'AmazonEmberLight';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVi2ZhZI2eCN5jzbjEETS9weq8-33mZGCQYb9lecyU.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AmazonEmber';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AmazonEmberBold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYb9lecyU.woff2) format('woff2');
+}
