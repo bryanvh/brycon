@@ -1,0 +1,132 @@
+@media only screen and (min-width: 769px) {
+  #aws-page-content {
+    margin-top: 0px;
+  }
+
+  .m-page-header + #aws-page-content {
+    margin-top: 0px;
+  }
+}
+
+#countdown-timer {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #0B173B;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #EFF8FB;
+}
+
+.box {
+  border: 2px solid #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.box-square {
+  border-radius: 0px;
+}
+
+.info {
+  background-color: #ddd;
+  border-color: #aaa;
+}
+
+.warning {
+  background-color: #fff484;
+  border-color: #dcc600;
+}
+
+.success {
+  background-color: #b9ffab;
+  border-color: #116400;
+  color: #116400;
+}
+
+.error {
+  background-color: #ebb1b1;
+  border-color: #973939;
+  color: #973939;
+}
+
+img.header {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+@font-face {
+  font-family: 'OpenSansLight';
+  font-style: normal;
+  font-weight: 300;
+  src: local ('OpenSansLight'), local ('OpenSans-Light'), url (https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2) format ('woff2');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local ('OpenSans'), local ('OpenSans-Regular'), url (https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format ('woff2');
+}
+
+@font-face {
+  font-family: 'OpenSansBold';
+  font-style: normal;
+  font-weight: 700;
+  src: local ('OpenSansBold'), local ('OpenSans-Bold'), url (https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format ('woff2');
+}
+
+@font-face {
+  font-family: 'AmazonEmberLight';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'),
+    url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVi2ZhZI2eCN5jzbjEETS9weq8-33mZGCQYb9lecyU.woff2)
+      format('woff2');
+}
+
+@font-face {
+  font-family: 'AmazonEmber';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
+    url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AmazonEmberBold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
+    url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYb9lecyU.woff2)
+      format('woff2');
+}
+
+@supports (-webkit-text-stroke: 1px #FF9900) {
+  #AWS_Step_Functions {
+    -webkit-text-stroke: 1px #FF9900;
+    -webkit-text-fill-color: #000;
+  }
+}
+
+.header-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.header-bg {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.header-content {
+  position: relative;
+}
