@@ -1,0 +1,19 @@
+.header-text { padding-bottom:15px; border-width:3px; background-color: rgb(255, 153, 0, 0.5); height:60px; }
+
+.header-margin { margin-top:0px; margin-bottom:30px; }
+
+.main-font { color:#232f3e; }
+
+.schedule-table { border:0; border-collapse:collapse }
+
+.schedule-table-column { width:110px }
+
+.location-container-margin { margin-top:0px; margin-bottom:0px; }
+
+.location-divider-margin { margin-top:0px; margin-bottom:15px; }
+
+.food-games-background { background-color:#f1f4f6; }
+
+.gaming-principles-background { background-color:#ffffff; margin-top:0px; margin-bottom:0px; }
+
+.directions-background { background-color:#f1f4f6; }
